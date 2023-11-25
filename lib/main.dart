@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:task_one_codecamp/image.dart';
-import 'package:task_one_codecamp/intro.dart';
 
 void main() {
   runApp(const MyApp());
