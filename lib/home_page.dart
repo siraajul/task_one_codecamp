@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("H O M E P A G E"),
+        centerTitle: true,
       ),
     );
   }
