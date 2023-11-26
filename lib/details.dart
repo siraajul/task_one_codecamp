@@ -21,14 +21,14 @@ class Details extends StatelessWidget {
           children: [
             Center(
               child: CircleAvatar(
-                radius: 80,
-                backgroundImage: AssetImage('assets/images/person.png'),
+                radius: 110,
+                backgroundImage: AssetImage('assets/images/details.png'),
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            Text('Hellooooo'),
+            
           ],
         ),
       ),

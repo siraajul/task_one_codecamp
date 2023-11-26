@@ -29,11 +29,14 @@ class ImagePage extends StatelessWidget {
       ),
       //---------------------Body Starts From Here--------------
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text('My Image List'),
+            const Text(
+              'My Image list',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w800),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -63,12 +66,6 @@ class ImagePage extends StatelessWidget {
                 ),
                 const SizedBox(
                   width: 16,
-                ),
-                ImageBox(
-                  height: boxSize,
-                  width: boxSize,
-                  imageURL:
-                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
                 ),
               ],
             ),
@@ -102,12 +99,6 @@ class ImagePage extends StatelessWidget {
                 const SizedBox(
                   width: 16,
                 ),
-                ImageBox(
-                  height: boxSize,
-                  width: boxSize,
-                  imageURL:
-                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
-                ),
               ],
             ),
             Row(
@@ -140,11 +131,37 @@ class ImagePage extends StatelessWidget {
                 const SizedBox(
                   width: 16,
                 ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
                 ImageBox(
                   height: boxSize,
                   width: boxSize,
                   imageURL:
                       'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                ImageBox(
+                  height: boxSize,
+                  width: boxSize,
+                  imageURL:
+                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                ImageBox(
+                  height: boxSize,
+                  width: boxSize,
+                  imageURL:
+                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
+                ),
+                const SizedBox(
+                  width: 16,
                 ),
               ],
             ),
