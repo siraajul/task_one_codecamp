@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_one_codecamp/image.dart';
 import 'package:task_one_codecamp/intro.dart';
+import 'package:task_one_codecamp/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
       ),
       debugShowCheckedModeBanner: false,
-      home: const IntroPage(),
+      home: const ImagePage(),
     );
   }
 }
