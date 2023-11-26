@@ -7,10 +7,6 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(' I N T R O P A G E'),
-        centerTitle: true,
-      ),
       body: Center(
           child: ElevatedButton(
         child: const Text('Go To Home'),
