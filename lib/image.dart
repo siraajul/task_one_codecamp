@@ -5,57 +5,92 @@ class ImagePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            'Home',
-            style: TextStyle(color: Colors.black),
-          ),
-          backgroundColor: Colors.white,
-          elevation: 0.5,
-          actions: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.list,
-                  color: Colors.black,
-                ))
-          ],
+    //print(MediaQuery.of(context).size.width);
+    final screenWidth = MediaQuery.of(context).size.width;
+    final boxSize = (screenWidth - (16 + 16 + 32)) / 3;
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Home',
+          style: TextStyle(color: Colors.black),
         ),
-        body: SizedBox(
-          child: Center(
-            child: GridView.count(
-              crossAxisCount: 3,
+        backgroundColor: Colors.white,
+        elevation: 0.5,
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.list,
+                color: Colors.black,
+                size: 30,
+              ))
+        ],
+      ),
+      //---------------------Body Starts From Here--------------
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Text('My Image List'),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    color: Colors.blue,
-                  ),
+                ImageBox(
+                  height: boxSize,
+                  width: boxSize,
+                  imageURL:
+                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    color: Colors.blue,
-                  ),
+                const SizedBox(
+                  width: 16,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 50,
-                    width: 50,
-                    color: Colors.blue,
-                  ),
+                ImageBox(
+                  height: boxSize,
+                  width: boxSize,
+                  imageURL:
+                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                ImageBox(
+                  height: boxSize,
+                  width: boxSize,
+                  imageURL:
+                      'https://www.mindful.org/content/uploads/7-Ways-to-Appreciate-the-Natural-World.png',
                 )
               ],
             ),
-          ),
+          ],
         ),
+      ),
+    );
+  }
+}
+
+class ImageBox extends StatelessWidget {
+  const ImageBox({
+    super.key,
+    required this.height,
+    required this.width,
+    required this.imageURL,
+  });
+
+  final double height;
+  final double width;
+  final String imageURL;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: height,
+      width: width,
+      child: Image(
+        image: NetworkImage(imageURL),
+        width: width,
+        height: height,
+        fit: BoxFit.cover,
       ),
     );
   }
