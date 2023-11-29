@@ -14,8 +14,8 @@ class Details extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0.5,
       ),
-      body: const Padding(
-        padding: EdgeInsets.all(16),
+      body:  Padding(
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -28,7 +28,84 @@ class Details extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            
+            Center(
+              child: Column(
+                children: [
+                  GestureDetector(
+                    child: Text('Sudipta Saha'),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => SecondScreen(
+                        name: 'Sudipta Saha',
+                        mail: 'abc @ gmail.com',
+                        designation: 'Senior Software Engineer'),
+
+                      ),
+                      );
+                    },
+                  ),
+                  GestureDetector(
+                    child: Text('A. S. M Jehan'),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => SecondScreen(
+                            name: 'A. S. M. Jehan',
+                            mail: 'abc @ gmail.com',
+                            designation: 'Software Engineer'),
+
+                      ),
+                      );
+                    },
+                  ),
+                  GestureDetector(
+                    child: Text('Sirajul Islam'),
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => SecondScreen(
+                            name: 'Sirajul Islam',
+                            mail: 'abc @ gmail.com',
+                            designation: 'Junior Software Engineer'),
+
+                      ),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  final String? name;
+  final String? mail;
+  final String? designation;
+
+  const SecondScreen({
+    Key? key,
+    required this.name,
+    required this.designation,
+    required this.mail,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Details'),
+        leading: const SizedBox(),
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Image.asset('assets/images/person.png'),
+            Text(name!),
+            Text(mail!),
+            Text(designation!),
           ],
         ),
       ),

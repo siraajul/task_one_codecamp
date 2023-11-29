@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("H O M E P A G E"),
+        title: const Text("H O M E P A G E"),
         centerTitle: true,
       ),
     );
