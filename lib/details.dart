@@ -19,23 +19,23 @@ class Details extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: CircleAvatar(
                 radius: 110,
                 backgroundImage: AssetImage('assets/images/details.png'),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Center(
               child: Column(
                 children: [
                   GestureDetector(
-                    child: Text('Sudipta Saha'),
+                    child: const Text('Sudipta Saha'),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => SecondScreen(
+                          builder: (context) => const SecondScreen(
                         name: 'Sudipta Saha',
                         mail: 'abc @ gmail.com',
                         designation: 'Senior Software Engineer'),
@@ -45,10 +45,10 @@ class Details extends StatelessWidget {
                     },
                   ),
                   GestureDetector(
-                    child: Text('A. S. M Jehan'),
+                    child: const Text('A. S. M Jehan'),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => SecondScreen(
+                        builder: (context) => const SecondScreen(
                             name: 'A. S. M. Jehan',
                             mail: 'abc @ gmail.com',
                             designation: 'Software Engineer'),
@@ -58,10 +58,10 @@ class Details extends StatelessWidget {
                     },
                   ),
                   GestureDetector(
-                    child: Text('Sirajul Islam'),
+                    child: const Text('Sirajul Islam'),
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(
-                        builder: (context) => SecondScreen(
+                        builder: (context) => const SecondScreen(
                             name: 'Sirajul Islam',
                             mail: 'abc @ gmail.com',
                             designation: 'Junior Software Engineer'),
